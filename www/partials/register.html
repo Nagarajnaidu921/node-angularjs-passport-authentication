@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+    <div class="bg-danger text-center" ng-if="message">{{message}}</div>
+        <form name="regForm" ng-submit="registerUser()">
+            <h2 class="text-center text-uppercase">Register</h2>
+            <div class="form-group">
+                <input type="email" ng-model="user.email" name="email" class="form-control" ng-required="true" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+                <input type="password" ng-model="user.password" name="password" class="form-control" ng-required="true" ng-minlength="4" placeholder="Enter Your Password">
+            </div>
+            <div class="form-group">
+                <input type="password" ng-model="user.rePassword" name="rePassword" class="form-control" ng-required="true" ng-minlength="4" placeholder="Re-Enter Your Password">
+            </div>
+            <button ng-disabled="regForm.$invalid || (user.password !== user.rePassword)" class="btn btn-primary btn-block text-uppercase">sign-up</button>
+        </form>
+    </div>
+</div>

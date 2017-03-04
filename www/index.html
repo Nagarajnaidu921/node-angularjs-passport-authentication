@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Node Passport Authentication For Angular App</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="/js/lib/angular.min.js"></script>
+    <script src="/js/lib/angular-route.min.js"></script>
+    <script src="/js/lib/jquery-3.1.1.min.js"></script>
+    <script src="/js/lib/bootstrap.min.js"></script>
+    <script src="/js/app.build.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="mainCtrl">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mob-navbar-collapse-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ng-href="/">Freshers Universe</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mob-navbar-collapse-menu">
+                <ul class="nav navbar-nav">
+                    <li><a ng-href="/">Home</a></li>
+                    <li><a href="#">Page 2</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a nav-active ng-href="#!/register" ng-hide="isLoggedIn"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a nav-active ng-href="#!/login" ng-hide="isLoggedIn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li ng-show="isLoggedIn" class="dropdown">
+                        <a nav-active href="#!/profile" class="dropdown-toggle" data-toggle="dropdown">Profile</a>
+                        <ul class="dropdown-menu">
+                            <li><a ng-href="#!/login" ng-click="logOut()">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" ng-view>
+    </div>
+</body>
+
+</html>
