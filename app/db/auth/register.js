@@ -19,6 +19,13 @@ function register(email, password) {
                     })
             }
         })
+        .catch(err => {
+            console.log(err);
+            return {
+                    message: err.message,
+                    success: false
+                }
+        })
 }
 
 // register('shivarajnaidu@gmail.com', 'abcd').then(x => console.log(x))

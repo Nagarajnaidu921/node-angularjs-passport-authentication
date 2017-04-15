@@ -3,9 +3,9 @@
 let dbConfig = {
     connectionLimit: 100,
     host: 'localhost',
-    user: '', //Provide Your DB username
-    password: '', //Provide Your DB password
-    database: ''  //Provide Your DB Name
+    user: 'root', //Provide Your DB username
+    password: 'root', //Provide Your DB password
+    database: 'nodetest'  //Provide Your DB Name
 };
 
 

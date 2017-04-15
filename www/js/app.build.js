@@ -80,12 +80,6 @@
                 })
         };
 
-        // $scope.fbLogIn = function() {
-        //     Auth.fbLogIn().then(function(data) {
-        //         console.log('res data', data)
-        //     })
-        // }
-
     }
 
 }())
@@ -165,13 +159,6 @@
                 })
         }
 
-        // function fbLogIn() {
-        //     return $http.get('/auth/facebook')
-        //         .then(function(res) {
-        //             console.log(res.data)
-        //             return res.data
-        //         })
-        // }
 
         function logOut() {
             LocalStorageServ.deleteUser();
